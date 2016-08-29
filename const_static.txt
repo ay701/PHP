@@ -8,18 +8,23 @@ class A{
     protected static $protected_static = "can access from inheriting classes";
     private static $private_static = "can access only inside the class";
 }
+
 2. Depending the visibility you can access static variables.
 //inside the class
     self::$variable_name;
     static::$variable_name;
 //outside the class
     class_name::$variable_name;
+
 3. Can change the value after declaration.
     self::$variable_name = "New Value";
     static::$variable_name = "New Value";
+
 4. No need to initialize when declare.
     public static $variable_name; 
+
 5. Normal variable declaration rules applied(ex: begins with $)
+
 6. Can create inside a function.
     class A{
         function my_function(){
