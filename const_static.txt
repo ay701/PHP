@@ -1,51 +1,61 @@
-an has a access modifier.
+Comparison
+
+Static
+
+1. Can has a access modifier.
 class A{
     public static $public_static = "can access from anywhere";
     protected static $protected_static = "can access from inheriting classes";
     private static $private_static = "can access only inside the class";
 }
-Depending the visibility you can access static variables.
+2. Depending the visibility you can access static variables.
 //inside the class
     self::$variable_name;
     static::$variable_name;
 //outside the class
     class_name::$variable_name;
-Can change the value after declaration.
+3. Can change the value after declaration.
     self::$variable_name = "New Value";
     static::$variable_name = "New Value";
-No need to initialize when declare.
+4. No need to initialize when declare.
     public static $variable_name; 
-Normal variable declaration rules applied(ex: begins with $)
-Can create inside a function.
+5. Normal variable declaration rules applied(ex: begins with $)
+6. Can create inside a function.
     class A{
         function my_function(){
              static $val = 12;
              echo ++$val; //13
         }
     }
+
 Constant
 
-Always public cannot put access modifiers.
+1. Always public cannot put access modifiers.
 class A{
     const my_constant = "constant value";
     public const wrong_constant="wrong" // produce a parse error
 }
-Anywhere you can access constant.
+
+2.Anywhere you can access constant.
 //inside the class
     self::variable_name;
     static::variable_name;
 //outside the class
     class_name::variable_name;
-Cannot change the value after declaration.
+
+3. Cannot change the value after declaration.
 self::variable_name = "cannot change"; //produce a parse error
-Must initialize when declare.
+
+4. Must initialize when declare.
 class A{
     const my_constant = "constant value";// Fine
     const wrong_constant;// produce a parse error
 }
-Must not use $ in the beginning of the variable(Other variable rules applied).
+
+5. Must not use $ in the beginning of the variable(Other variable rules applied).
  class A{
     const my_constant = "constant value";// Fine
     const $wrong_constant="wrong";// produce a parse error
 }
-Cannot declare inside a function.
+
+6. Cannot declare inside a function.
