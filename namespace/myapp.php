@@ -1,4 +1,7 @@
 <?php
+// Name collision problems can be solved with namespaces.
+// PHP constants, classes, and functions can be grouped into namespaced libraries.
+
 require_once("proj_1.php");
 require_once("proj_2.php");
 
