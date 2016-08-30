@@ -1,2 +1,0 @@
-// Name collision problems can be solved with namespaces. 
-// PHP constants, classes, and functions can be grouped into namespaced libraries.
