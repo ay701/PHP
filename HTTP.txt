@@ -20,3 +20,4 @@ Post - Submit data to be processed to a specified resource (back or reload will 
 Put - Upload a representations of the specified URI
 Delete - Delete the specified resource
 Head - Same like Get, but will only return HTTP Headers 
+Option - Get HTTP method options
