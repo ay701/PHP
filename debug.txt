@@ -1,0 +1,31 @@
+How to debug in PHP?
+
+First, you should turn display_errors on. This can be done either in your php.ini file or at the head of your code like this:
+
+<?php
+ini_set('display_errors', 'On');
+
+Next, to ensure notices are displayed, set your error reporting level either in your php.ini or amend your runtime code to look like this:
+
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
+4 types of errors:
+- Syntax error
+- Warnings (Headers already sent)
+- Notices (Undefined index)
+- Fatal Errors
+
+And, using var_dump() to Aid Your Debugging
+
+Last, using tools to consider debugging
+- xdebug (PHP extension)
+  Automatic stack trace upon error
+  Function call logging
+  Display features such as enhanced var_dump() output and code coverage information.
+
+- FirePHP (PHP Library)
+  <?php
+  $sSql = 'SELECT * FROM tbl';
+  FB::log('SQL query: ' . $sSql);
