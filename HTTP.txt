@@ -13,3 +13,10 @@ HTTP is connectionless: The HTTP client, i.e., a browser initiates an HTTP reque
 HTTP is media independent: It means, any type of data can be sent by HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.
 
 HTTP is stateless: As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.
+
+Methods:
+GET - Request data from a specified resource (bookmarked, cached, insecure, data length restriction, only ascii chars, visible)
+Post - Submit data to be processed to a specified resource (back or reload will re-submit, unlimited data length, binary data allowed, data not display in url)
+Put - Upload a representations of the specified URI
+Delete - Delete the specified resource
+Head - Same like Get, but will only return HTTP Headers 
